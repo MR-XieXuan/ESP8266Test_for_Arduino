@@ -18,7 +18,6 @@
       http://arduino.esp8266.com/stable/package_esp8266com_index.json
    - 打开“工具 - >板 - >板管理器”，然后单击ESP8266的安装“
    - 在“工具 - >板”中选择您的ESP8266
-这个是我用翻译把顶部注释翻译了
 */
 
 #include <ESP8266WiFi.h>
@@ -67,7 +66,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
   // 如果收到1作为第一个字符，则打开LED
   if ((char)payload[3] == '1') {
-    digitalWrite(BUILTIN_LED, LOW);   // 这里他说接受的‘1’就打开灯 但是我在用的时候 接收到0才会打开  这一行的‘LOW’和下面的‘HIGH’应该换下位置，下面也说了 ESP-01是这样的
+    digitalWrite(BUILTIN_LED, LOW);   // 这里他说接受的‘1’就打开灯 
     // but actually the LED is on; this is because
     // it is active low on the ESP-01)
   } else {
